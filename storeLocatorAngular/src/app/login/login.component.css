@@ -1,0 +1,41 @@
+body {
+   /* background: url(https://spinoff.com.br/wp-content/uploads/Os-Vingadores.jpg) ; */
+    /* background: url(https://www.infoescola.com/wp-content/uploads/2019/10/paisagem-ouro-preto-1008049370.jpg) no-repeat center top fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fontes {
+    color: #0b5f69;
+}
+.row {
+    justify-content: center;
+}
+.border {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    /* background-color: #d4d4d462; */
+}
+.box {
+    width: 300px;
+    height: 300px;
+    margin: 0px 10px;
+    background: #fff;
+}
+.btn-info {
+    background-color: #0b5f69!important;
+    color: #fff;
+}
+.fa {
+    color: #0b5f69;
+}
+.md-form input[type=text]:focus:not([readonly]), .md-form input[type=password]:focus:not([readonly]), .md-form input[type=email]:focus:not([readonly]), .md-form input[type=url]:focus:not([readonly]), .md-form input[type=time]:focus:not([readonly]), .md-form input[type=date]:focus:not([readonly]), .md-form input[type=datetime-local]:focus:not([readonly]), .md-form input[type=tel]:focus:not([readonly]), .md-form input[type=number]:focus:not([readonly]), .md-form input[type=search-md]:focus:not([readonly]), .md-form input[type=search]:focus:not([readonly]), .md-form textarea.md-textarea:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #0b5f69;
+    border-bottom: 1px solid #0b5f69;
+}
+.md-form label.active {
+    color: #0b5f69;
+}
+.md-form, label.active {
+    color: #0b5f69;
+}

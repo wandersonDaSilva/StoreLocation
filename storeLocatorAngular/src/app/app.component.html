@@ -1,0 +1,38 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#"><b>Store Locator</b></a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a href="#map" class="nav-link waves-light" mdbWavesEffect><i class="fa fa-map"></i> Map<span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['']" class="nav-link waves-light" mdbWavesEffect>Home</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <i class="fa fa-user"></i> Minha conta<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['login']">Login</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['cadastro']">Cadastrar-se</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+<router-outlet></router-outlet>

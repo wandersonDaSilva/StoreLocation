@@ -1,0 +1,48 @@
+
+.table-title {
+    padding-bottom: 15px;
+    background: #435d7d;
+    color: #fff;
+    padding: 16px 30px;
+    margin: -20px -25px 10px;
+    border-radius: 3px 3px 0 0;
+}
+.sombra {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.label, small {
+    color: rgb(14, 143, 159);
+    /* font-family: 'Monotype Corsiva', cursive; */
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.md-form label {
+    left: 15px;
+}
+textarea:focus,
+input:focus,
+select:focus {
+    border-color: none !important;
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.hora {
+    margin-top: 8px;
+}
+h5, h3 {
+    font-family: 'Open Sans',Sans-Serif;
+    color: rgb(94, 94, 94);
+    font-weight: bold;
+}
+.botao {
+  text-align: right;
+}
+.botaoEnviar {
+  text-align: right;
+  font-size: 8px  !important;
+}
+.btn-danger, .btn-primary {
+  background-color: #0b5f69!important;
+  color: #fff;
+  font-size: 10px
+}

@@ -1,0 +1,133 @@
+<section class="section-cadastro py-5">
+  <div class="container sombra py-3">
+    <h3>Cadastro</h3>
+    <form [formGroup]="form">
+      <div class="row py-4">
+        <div class="form-group col-sm-6">
+          <label class="label">Nome</label>
+          <input type="nome" [(ngModel)]="cadastro.nome" formControlName="nome" class="form-control" id="exampleInputNome1"
+           placeholder="" name="nome">
+        </div>
+        <div *ngIf="form.controls.nome.invalid && isInvalid">
+          <small class="smallValidation">Campo Obrigatório!</small>
+        </div>
+        <div class="form-group col-sm-3">
+          <label class="label">CPF / CNPJ</label>
+          <input type="cpfCnpj" [(ngModel)]="cadastro.cpfCnpj" formControlName="cpfCnpj" class="form-control" id="exampleInputNome1"
+            placeholder="000-000-000-00" name="cpfCnpj">
+        </div>
+        <div class="form-group col-sm-3">
+          <label class="label">Telefone ( WhatsApp )</label>
+          <input type="telefone" [(ngModel)]="cadastro.telefone" formControlName="telefone" class="form-control" id="exampleInputNome1"
+            placeholder="00000-0000" name="telefone">
+        </div>
+        <div class="form-group col-sm-4">
+          <label class="label">Email</label>
+          <input type="email" [(ngModel)]="cadastro.email" formControlName="email" class="form-control" id="exampleInputNome1"
+            placeholder="exemplo@email.com" name="email" email>
+        </div>
+        <div class="form-group col-sm-4">
+          <label class="label">Senha</label>
+          <input type="password" [(ngModel)]="cadastro.senha" formControlName="senha" class="form-control" id="exampleInputNome1"
+           placeholder="********" name="senha">
+        </div>
+        <div class="form-group col-sm-4">
+          <label class="label">Confirme sua senha</label>
+          <input type="password" [(ngModel)]="cadastro.senhaConfirm" formControlName="senhaConfirm" class="form-control" id="exampleInputNome1"
+           placeholder="********" name="senhaConfirm">
+        </div>
+        <div class="form-group col-sm-2">
+          <label class="label">CEP</label>
+          <input type="cep" [(ngModel)]="cadastro.cep" formControlName="cep" class="form-control" id="exampleInputNome1"
+           placeholder="00000-000" name="cep" (blur)="consultaCEP($event)">
+        </div>
+        <div class="form-group col-sm-8">
+          <label class="label">Endereço</label>
+          <input type="endereco" [(ngModel)]="cadastro.endereco" formControlName="endereco" class="form-control" id="exampleInputNome1"
+           placeholder="" name="endereco">
+        </div>
+        <div class="form-group col-sm-2">
+          <label class="label">Número</label>
+          <input type="number" [(ngModel)]="cadastro.numero" formControlName="numero" class="form-control" id="exampleInputNome1"
+           placeholder="" name="numero">
+        </div>
+        <div class="form-group col-sm-6">
+          <label class="label">Bairro</label>
+          <input type="bairro" [(ngModel)]="cadastro.bairro" formControlName="bairro" class="form-control" id="exampleInputNome1"
+           placeholder="" name="bairro">
+        </div>
+        <div class="form-group col-sm-4">
+          <label class="label">Cidade</label>
+          <input type="cidade" [(ngModel)]="cadastro.cidade" formControlName="cidade" class="form-control" id="exampleInputNome1"
+           placeholder="" name="cidade">
+        </div>
+        <div class="form-group col-sm-2">
+          <label class="label">Estado</label>
+          <select [(ngModel)]="cadastro.estado" formControlName="estado" class="form-control" name="estado">
+            <option [ngValue]="undefined">Selecione</option>
+            <option ngValue="AC">Acre</option>
+            <option ngValue="AL">Alagoas</option>
+            <option ngValue="AP">Amapá</option>
+            <option ngValue="AM">Amazonas</option>
+            <option ngValue="BA">Bahia</option>
+            <option ngValue="CE">Ceará</option>
+            <option ngValue="DF">Distrito Federal</option>
+            <option ngValue="ES">Espírito Santo</option>
+            <option ngValue="GO">Goiás</option>
+            <option ngValue="MA">Maranhão</option>
+            <option ngValue="MT">Mato Grosso</option>
+            <option ngValue="MS">Mato Grosso do Sul</option>
+            <option ngValue="MG">Minas Gerais</option>
+            <option ngValue="PA">Pará</option>
+            <option ngValue="PB">Paraíba</option>
+            <option ngValue="PR">Paraná</option>
+            <option ngValue="PE">Pernambuco</option>
+            <option ngValue="PI">Piauí</option>
+            <option ngValue="RJ">Rio de Janeiro</option>
+            <option ngValue="RN">Rio Grande do Norte</option>
+            <option ngValue="RS">Rio Grande do Sul</option>
+            <option ngValue="RO">Rondônia</option>
+            <option ngValue="RR">Roraima</option>
+            <option ngValue="SC">Santa Catarina</option>
+            <option ngValue="SP">São Paulo</option>
+            <option ngValue="SE">Sergipe</option>
+            <option ngValue="TO">Tocantins</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-12 py-2">
+          <h5>Especificações</h5>
+        </div>
+        <div class="form-group hora col-sm-2">
+          <small>Horário de abertura</small>
+          <input type="time" [(ngModel)]="cadastro.horaAbertura" formControlName="horaAbertura" class="form-control" id="exampleInputNome1" name="horaAbertura">
+        </div>
+        <div class="form-group hora col-sm-2">
+          <small>Horário de fechamento</small>
+          <input type="time" [(ngModel)]="cadastro.horaFechamento" formControlName="horaFechamento" class="form-control" id="exampleInputNome1" name="horaFechamento">
+        </div>
+        <div class="form-group col-sm-2">
+          <label class="label">Categoria</label>
+          <select [(ngModel)]="cadastro.categoria" formControlName="categoria" class="form-control" name="categoria">
+            <option [ngValue]="undefined">Selecione</option>
+          </select>
+        </div>
+        <div [ngClass]="('entrega')" class="form-group col-sm-4">
+          <label class="label" for="entrega">Seu Estabelecimento faz entregas?</label>
+          <div id="entrega" class="row">
+            <div *ngFor="let item of formRadioOpition" class="col-sm-2">
+              <label class="radio-inline">
+                <input [(ngModel)]="cadastro.entrega" formControlName="entrega" class="control-input" type="radio" [value]="item.valor">
+                {{ item.desc }}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="botao">
+      <button mdbBtn type="submit" (click)="salvar()" class="btn btn-primary botaoEnviar">Salvar</button>
+      &nbsp;
+      <button mdbBtn type="danger" (click)="Cancelar()" class="btn btn-danger botaoEnviar">Cancelar</button>
+    </div>
+  </div>
+</section>

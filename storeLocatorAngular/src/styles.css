@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700|Open+Sans:300,400,600,700");
+.cyan {
+    background-color: #0b5f69 !important;
+    color: #0b5f69;
+}
+h5, h3 {
+    /* font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; */
+    font-family: 'Open Sans',Sans-Serif;
+    color: rgb(94, 94, 94);
+    font-weight: bold;
+}
+textarea:focus,
+input:focus,
+select:focus {
+    border-color: none !important;
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+

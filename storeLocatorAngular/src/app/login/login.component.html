@@ -1,0 +1,59 @@
+<body>
+    <div class="conteiner py-5">
+        <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <!-- Default form login -->
+            <form class="text-center border border-light p-5">
+
+                <h3>Login</h3>
+
+                <!-- Email -->
+                <!-- <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail"> -->
+                <div class="md-form">
+                    <input mdbInput type="text" id="form1" class="form-control">
+                    <label for="form1" class="fontes">Email</label>
+                </div>
+
+                <!-- Password -->
+                <!-- <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"> -->
+                <div class="md-form">
+                    <input minlength="6" mdbInput type="password" id="form1" class="form-control">
+                    <label for="form1" class="fontes">Password</label>
+                </div>
+
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <!-- Remember me -->
+                        <mdb-checkbox [default]="true">Lembre-me&nbsp;</mdb-checkbox>
+                    </div>
+                    <div>
+                        <!-- Forgot password -->
+                        <a href="">Esqueceu a senha?</a>
+                    </div>
+                </div>
+
+                <!-- Sign in button -->
+                <button [routerLink]="[ '' ]" mdbBtn color="info" block="true" class="my-4" type="submit">Entrar</button>
+
+                <!-- Register -->
+                <p>Não é um membro?
+                    <a >Cadastre-se</a>
+                </p>
+
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fa fa-github"></i>
+                </a>
+
+            </form>
+            <!-- Default form login -->
+        </div>
+    </div>
+</body>
